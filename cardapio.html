@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ronronar & Café - Nosso Cardápio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Quicksand', 'sans-serif'],
+              display: ['Pacifico', 'cursive'],
+            },
+            colors: {
+              'brand-bg': '#FBF9F6',
+              'brand-surface': '#FFFFFF',
+              'brand-primary': '#F4A261',
+              'brand-primary-dark': '#E76F51',
+              'brand-secondary': '#2A9D8F',
+              'brand-text': '#3C2F2F',
+              'brand-subtle': '#A89F97',
+            },
+            boxShadow: {
+              soft: '0 4px 12px 0 rgba(0, 0, 0, 0.05)',
+              medium:
+                '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06)',
+              lifted: '0 10px 20px -5px rgba(0, 0, 0, 0.07)',
+            },
+            transitionDuration: { 250: '250ms' },
+            animation: { 'fade-in-up': 'fadeInUp 0.8s ease-out forwards' },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-brand-bg text-brand-text font-sans">
+    <header
+      id="main-header"
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+    >
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="index.html" class="font-display text-3xl text-brand-primary"
+          >Ronronar & Café</a
+        >
+        <div
+          class="hidden md:flex items-center space-x-2 bg-brand-surface/50 border border-white/20 px-3 py-2 rounded-full"
+        >
+          <a
+            href="index.html"
+            class="px-4 py-2 text-sm font-medium text-brand-subtle hover:text-brand-text transition duration-250"
+            >Início</a
+          >
+          <a
+            href="sobre.html"
+            class="px-4 py-2 text-sm font-medium text-brand-subtle hover:text-brand-text transition duration-250"
+            >Sobre Nós</a
+          >
+          <a
+            href="cardapio.html"
+            class="px-4 py-2 text-sm font-semibold text-brand-secondary bg-brand-secondary/10 rounded-full"
+            >Nosso Cardápio</a
+          >
+          <a
+            href="gatinhos.html"
+            class="px-4 py-2 text-sm font-medium text-brand-subtle hover:text-brand-text transition duration-250"
+            >Nossos Gatinhos</a
+          >
+          <a
+            href="contato.html"
+            class="px-4 py-2 text-sm font-medium text-brand-subtle hover:text-brand-text transition duration-250"
+            >Contato</a
+          >
+        </div>
+        <button id="mobile-menu-button" class="md:hidden text-brand-secondary">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-7 w-7"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </nav>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-brand-surface/95 backdrop-blur-sm mt-2 mx-4 rounded-xl shadow-lifted p-4"
+      >
+        <a
+          href="index.html"
+          class="block py-2 px-3 font-medium hover:text-brand-text transition duration-250"
+          >Início</a
+        >
+        <a
+          href="sobre.html"
+          class="block py-2 px-3 font-medium hover:text-brand-text transition duration-250"
+          >Sobre Nós</a
+        >
+        <a
+          href="cardapio.html"
+          class="block py-2 px-3 font-semibold text-brand-secondary bg-brand-secondary/10 rounded-lg"
+          >Nosso Cardápio</a
+        >
+        <a
+          href="gatinhos.html"
+          class="block py-2 px-3 font-medium hover:text-brand-text transition duration-250"
+          >Nossos Gatinhos</a
+        >
+        <a
+          href="contato.html"
+          class="block py-2 px-3 font-medium hover:text-brand-text transition duration-250"
+          >Contato</a
+        >
+      </div>
+    </header>
+
+    <main class="py-32 px-6">
+      <div class="container mx-auto">
+        <div class="text-center mb-16 animate-fade-in-up">
+          <h1 class="text-5xl font-bold text-brand-text">
+            Sabores que Aconchegam
+          </h1>
+          <p class="text-lg mt-4 text-brand-subtle">
+            Ingredientes selecionados, preparo artesanal e uma pitada de amor.
+          </p>
+        </div>
+
+        <section class="mb-20">
+          <h2
+            class="text-3xl font-bold text-brand-text mb-10 text-center animate-fade-in-up"
+            style="animation-delay: 100ms"
+          >
+            Cafés & Bebidas Quentes
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="bg-brand-surface rounded-3xl shadow-soft p-6 flex flex-col justify-between animate-fade-in-up"
+              style="animation-delay: 200ms"
+            >
+              <div>
+                <h3 class="text-xl font-bold text-brand-secondary">
+                  Espresso Afeto
+                </h3>
+                <p class="text-sm text-brand-subtle mt-2">
+                  Um shot de pura energia e sabor para começar bem o dia.
+                </p>
+              </div>
+              <p class="text-right text-lg font-bold text-brand-primary mt-4">
+                R$ 8,00
+              </p>
+            </div>
+            <div
+              class="bg-brand-surface rounded-3xl shadow-soft p-6 flex flex-col justify-between animate-fade-in-up"
+              style="animation-delay: 300ms"
+            >
+              <div>
+                <h3 class="text-xl font-bold text-brand-secondary">
+                  Capuccino Ronronar
+                </h3>
+                <p class="text-sm text-brand-subtle mt-2">
+                  Cremoso e aveludado, com um toque de chocolate belga.
+                </p>
+              </div>
+              <p class="text-right text-lg font-bold text-brand-primary mt-4">
+                R$ 14,00
+              </p>
+            </div>
+            <div
+              class="bg-brand-surface rounded-3xl shadow-soft p-6 flex flex-col justify-between animate-fade-in-up"
+              style="animation-delay: 400ms"
+            >
+              <div>
+                <h3 class="text-xl font-bold text-brand-secondary">
+                  Chocolate Quente Soneca
+                </h3>
+                <p class="text-sm text-brand-subtle mt-2">
+                  Um abraço quentinho em forma de bebida, feito com cacau 70%.
+                </p>
+              </div>
+              <p class="text-right text-lg font-bold text-brand-primary mt-4">
+                R$ 16,00
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2
+            class="text-3xl font-bold text-brand-text mb-10 text-center animate-fade-in-up"
+            style="animation-delay: 500ms"
+          >
+            Doces & Salgados
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="bg-brand-surface rounded-3xl shadow-soft p-6 flex flex-col justify-between animate-fade-in-up"
+              style="animation-delay: 600ms"
+            >
+              <div>
+                <h3 class="text-xl font-bold text-brand-secondary">
+                  Bolo de Cenoura Felpudo
+                </h3>
+                <p class="text-sm text-brand-subtle mt-2">
+                  Com cobertura generosa de brigadeiro. Impossível resistir.
+                </p>
+              </div>
+              <p class="text-right text-lg font-bold text-brand-primary mt-4">
+                R$ 15,00 / fatia
+              </p>
+            </div>
+            <div
+              class="bg-brand-surface rounded-3xl shadow-soft p-6 flex flex-col justify-between animate-fade-in-up"
+              style="animation-delay: 700ms"
+            >
+              <div>
+                <h3 class="text-xl font-bold text-brand-secondary">
+                  Pão de Queijo Caçador
+                </h3>
+                <p class="text-sm text-brand-subtle mt-2">
+                  Quentinho e crocante, servido em porção generosa de 6
+                  unidades.
+                </p>
+              </div>
+              <p class="text-right text-lg font-bold text-brand-primary mt-4">
+                R$ 12,00 / porção
+              </p>
+            </div>
+            <div
+              class="bg-brand-surface rounded-3xl shadow-soft p-6 flex flex-col justify-between animate-fade-in-up"
+              style="animation-delay: 800ms"
+            >
+              <div>
+                <h3 class="text-xl font-bold text-brand-secondary">
+                  Tostex do Gato
+                </h3>
+                <p class="text-sm text-brand-subtle mt-2">
+                  Pão de fermentação natural, queijo meia cura e tomate fresco.
+                </p>
+              </div>
+              <p class="text-right text-lg font-bold text-brand-primary mt-4">
+                R$ 22,00
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="bg-brand-secondary text-white py-12 px-6">
+      <div class="container mx-auto text-center">
+        <p class="font-display text-3xl opacity-80 mb-2">Ronronar & Café</p>
+        <p>&copy; 2025. Feito com amor, café e patinhas.</p>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById('mobile-menu-button')
+        .addEventListener('click', function () {
+          document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+      window.addEventListener('scroll', function () {
+        const header = document.getElementById('main-header');
+        if (window.scrollY > 10) {
+          header.classList.add('bg-brand-surface', 'shadow-medium');
+        } else {
+          header.classList.remove('bg-brand-surface', 'shadow-medium');
+        }
+      });
+    </script>
+  </body>
+</html>

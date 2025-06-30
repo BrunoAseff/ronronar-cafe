@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ronronar & Café - Início</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Quicksand', 'sans-serif'],
+              display: ['Pacifico', 'cursive'],
+            },
+            colors: {
+              'brand-bg': '#FBF9F6',
+              'brand-surface': '#FFFFFF',
+              'brand-primary': '#F4A261',
+              'brand-primary-dark': '#E76F51',
+              'brand-secondary': '#2A9D8F',
+              'brand-text': '#3C2F2F',
+              'brand-subtle': '#A89F97',
+            },
+            boxShadow: {
+              soft: '0 4px 12px 0 rgba(0, 0, 0, 0.05)',
+              medium:
+                '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06)',
+              lifted: '0 10px 20px -5px rgba(0, 0, 0, 0.07)',
+            },
+            transitionDuration: { 250: '250ms' },
+            animation: { 'fade-in-up': 'fadeInUp 0.8s ease-out forwards' },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-brand-bg text-brand-text font-sans">
+    <header
+      id="main-header"
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+    >
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="index.html" class="font-display text-3xl text-brand-primary"
+          >Ronronar & Café</a
+        >
+        <div
+          class="hidden md:flex items-center space-x-2 bg-brand-surface/50 border border-white/20 px-3 py-2 rounded-full"
+        >
+          <a
+            href="index.html"
+            class="px-4 py-2 text-sm font-semibold text-brand-secondary bg-brand-secondary/10 rounded-full"
+            >Início</a
+          >
+          <a
+            href="sobre.html"
+            class="px-4 py-2 text-sm font-medium text-brand-subtle hover:text-brand-text transition duration-250"
+            >Sobre Nós</a
+          >
+          <a
+            href="cardapio.html"
+            class="px-4 py-2 text-sm font-medium text-brand-subtle hover:text-brand-text transition duration-250"
+            >Nosso Cardápio</a
+          >
+          <a
+            href="gatinhos.html"
+            class="px-4 py-2 text-sm font-medium text-brand-subtle hover:text-brand-text transition duration-250"
+            >Nossos Gatinhos</a
+          >
+          <a
+            href="contato.html"
+            class="px-4 py-2 text-sm font-medium text-brand-subtle hover:text-brand-text transition duration-250"
+            >Contato</a
+          >
+        </div>
+        <button id="mobile-menu-button" class="md:hidden text-brand-secondary">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-7 w-7"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </nav>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-brand-surface/95 backdrop-blur-sm mt-2 mx-4 rounded-xl shadow-lifted p-4"
+      >
+        <a
+          href="index.html"
+          class="block py-2 px-3 font-semibold text-brand-secondary bg-brand-secondary/10 rounded-lg"
+          >Início</a
+        >
+        <a
+          href="sobre.html"
+          class="block py-2 px-3 font-medium hover:text-brand-text transition duration-250"
+          >Sobre Nós</a
+        >
+        <a
+          href="cardapio.html"
+          class="block py-2 px-3 font-medium hover:text-brand-text transition duration-250"
+          >Nosso Cardápio</a
+        >
+        <a
+          href="gatinhos.html"
+          class="block py-2 px-3 font-medium hover:text-brand-text transition duration-250"
+          >Nossos Gatinhos</a
+        >
+        <a
+          href="contato.html"
+          class="block py-2 px-3 font-medium hover:text-brand-text transition duration-250"
+          >Contato</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <section
+        class="container mx-auto px-6 pt-32 pb-16 flex flex-col md:flex-row items-center min-h-screen"
+      >
+        <div
+          class="md:w-1/2 lg:w-5/12 text-center md:text-left animate-fade-in-up"
+        >
+          <h1
+            class="font-display text-6xl lg:text-7xl text-brand-secondary mb-6"
+          >
+            Café, Carinho & Ronronar
+          </h1>
+          <p class="text-xl text-brand-subtle max-w-md mx-auto md:mx-0">
+            Sua pausa perfeita em Itajaí, em um ambiente onde o amor por gatos e
+            o aroma do café se encontram.
+          </p>
+          <a
+            href="cardapio.html"
+            class="mt-10 inline-block bg-gradient-to-r from-brand-primary to-brand-primary-dark text-white font-bold py-4 px-10 rounded-xl shadow-lifted hover:shadow-soft hover:-translate-y-1 transition-all duration-250"
+            >Descubra nosso cardápio</a
+          >
+        </div>
+        <div
+          class="md:w-1/2 lg:w-7/12 mt-12 md:mt-0 flex justify-center animate-fade-in-up"
+          style="animation-delay: 200ms"
+        >
+          <div class="w-10/12 md:w-full h-auto">
+            <img
+              src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?q=80&w=1887&auto=format&fit=crop"
+              alt="Gato bonito em um ambiente de café"
+              class="rounded-3xl shadow-lifted"
+              style="clip-path: ellipse(85% 90% at 50% 50%)"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="py-24 px-6 bg-brand-surface">
+        <div class="container mx-auto text-center">
+          <h2 class="text-4xl font-bold text-brand-text mb-4">
+            Um refúgio para todos
+          </h2>
+          <p class="text-lg text-brand-subtle mb-16 max-w-2xl mx-auto">
+            Mais que um café, um ponto de encontro para quem ama animais e
+            aprecia as coisas boas da vida.
+          </p>
+          <div class="grid md:grid-cols-3 gap-10">
+            <div
+              class="p-8 text-center animate-fade-in-up"
+              style="animation-delay: 100ms"
+            >
+              <div
+                class="inline-block p-4 bg-brand-primary/10 rounded-2xl mb-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-10 w-10 text-brand-primary"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-brand-text mb-2">
+                Cafés Especiais
+              </h3>
+              <p class="text-brand-subtle">
+                Grãos selecionados da região e moídos na hora, para uma
+                experiência de sabor inesquecível.
+              </p>
+            </div>
+            <div
+              class="p-8 text-center animate-fade-in-up"
+              style="animation-delay: 200ms"
+            >
+              <div
+                class="inline-block p-4 bg-brand-secondary/10 rounded-2xl mb-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-10 w-10 text-brand-secondary"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-brand-text mb-2">
+                Terapia Felina
+              </h3>
+              <p class="text-brand-subtle">
+                Relaxe na companhia dos nossos gatinhos residentes. Eles são
+                dóceis, brincalhões e adoram atenção.
+              </p>
+            </div>
+            <div
+              class="p-8 text-center animate-fade-in-up"
+              style="animation-delay: 300ms"
+            >
+              <div
+                class="inline-block p-4 bg-brand-primary/10 rounded-2xl mb-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-10 w-10 text-brand-primary"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-brand-text mb-2">
+                Adoção com Amor
+              </h3>
+              <p class="text-brand-subtle">
+                Encontrou uma conexão especial? Nossos gatinhos buscam um lar
+                responsável e cheio de amor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-brand-secondary text-white py-12 px-6">
+      <div class="container mx-auto text-center">
+        <p class="font-display text-3xl opacity-80 mb-2">Ronronar & Café</p>
+        <p>&copy; 2025. Feito com amor, café e patinhas.</p>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById('mobile-menu-button')
+        .addEventListener('click', function () {
+          document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+      window.addEventListener('scroll', function () {
+        const header = document.getElementById('main-header');
+        if (window.scrollY > 10) {
+          header.classList.add('bg-brand-surface', 'shadow-medium');
+        } else {
+          header.classList.remove('bg-brand-surface', 'shadow-medium');
+        }
+      });
+    </script>
+  </body>
+</html>
